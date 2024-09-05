@@ -10,6 +10,7 @@ Route::get('/', function () {
 
 Route::controller(AudienceController::class)->group(function() {
     Route::get('/registrasi', 'index')->name('registrasi.index');
+    Route::post('/registrasi', 'store')->name('registrasi.store');
 }); 
 
 

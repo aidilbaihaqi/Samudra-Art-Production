@@ -34,7 +34,7 @@
         
         <!-- Form Section -->
         <div class="w-full md:w-1/2 py-7 px-5">
-            <form class="" action="" method="POST">
+            <form class="" action="{{ route('registrasi.store') }}" method="POST">
               @csrf
                 <div class="space-y-12">
                     <div class="border-gray-900/10 pb-12">
