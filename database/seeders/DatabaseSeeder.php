@@ -27,7 +27,8 @@ class DatabaseSeeder extends Seeder
             'nama' => 'Sample Name',
             'alamat_domisili' => 'Sample Address',
             'no_whatsapp' => '081268335349',
-            'no_kursi' => 'A1'
+            'no_kursi' => 'A1',
+            'no_tiket' => 'POKAMAYAMAY-A1'
         ]);
     }
 }
