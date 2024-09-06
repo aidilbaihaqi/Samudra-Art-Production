@@ -9,7 +9,16 @@ use Illuminate\Support\Facades\DB;
 
 class AudienceController extends Controller
 {
+
     public function index() {
+        $data = Audience::all();
+
+        return view('audience',[
+            'data' => $data
+        ]);
+    }
+
+    public function registrasi() {
         $nokursi = DB::table('audiences')->pluck('no_kursi');
         $sisakursi = 200 - DB::table('audiences')->count();
         return view('registrasi', [
