@@ -37,12 +37,18 @@
       <!-- Explanation -->
       <div class="mt-6 sm:m-3">
           <p class="text-xl font-semibold">Pertunjukan Harmoni Kata : Alih Wahana Sastra Melayu Klasik ke Laman Kreativitas Musik</p>
-          <p class="mt-2 text-gray-400">Laman pendaftaran akan segera dibuka! Update terus info dari kami melalui instagram <a href="https://www.instagram.com/samudraartproduction/" class="underline underline-offset-8">@samudraartproduction</a></p>
+          <p class="mt-2 text-gray-400">Laman pendaftaran telah dibuka! Segera amankan kursi anda tanpa dipungut biaya</p>
       </div>
 
       <!-- Coming Soon Text -->
       <div class="mt-8">
-          <span class="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-transparent bg-clip-text text-4xl font-bold animate-pulse">Coming Soon</span>
+        <a href="{{ route('registrasi.index') }}" 
+   class="relative inline-block px-6 py-2 text-md font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-700 rounded-lg shadow-lg transition-all duration-300 hover:from-purple-700 hover:to-indigo-500 hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
+    <span class="absolute inset-0 w-full h-full bg-white opacity-0 rounded-lg transition-opacity duration-300 hover:opacity-10"></span>
+    <span class="relative z-10">Pesan Tiket</span>
+</a>
+
+     
       </div>
   </div>
 </body>
