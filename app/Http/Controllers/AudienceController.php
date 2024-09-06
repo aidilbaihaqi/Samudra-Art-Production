@@ -11,8 +11,10 @@ class AudienceController extends Controller
 {
     public function index() {
         $nokursi = DB::table('audiences')->pluck('no_kursi');
+        $sisakursi = 200 - DB::table('audiences')->count();
         return view('registrasi', [
-            'nokursi' => $nokursi
+            'nokursi' => $nokursi,
+            'sisakursi' => $sisakursi
         ]);
     }
 
