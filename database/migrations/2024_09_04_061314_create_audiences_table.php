@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama', 100);
             $table->text('alamat_domisili');
             $table->string('no_whatsapp', 16);
-            $table->string('no_kursi', 3);
+            $table->string('no_kursi', 3)->unique();
             $table->string('no_tiket', 20);
             $table->enum('jenis_tiket', ['regular', 'vip'])->default('regular');
             $table->boolean('status_kehadiran')->default(0);
