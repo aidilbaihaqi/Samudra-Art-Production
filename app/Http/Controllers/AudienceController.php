@@ -18,7 +18,7 @@ class AudienceController extends Controller
             'nama' => 'required|max:100',
             'alamat_domisili' => 'required',
             'no_whatsapp' => 'required',
-            // 'no_kursi' => 'required'
+            'no_kursi' => 'required'
         ]);
 
         if($validated) {
@@ -26,8 +26,8 @@ class AudienceController extends Controller
                 'nama' => $request->nama,
                 'alamat_domisili' => $request->alamat_domisili,
                 'no_whatsapp' => $request->no_whatsapp,
-                'no_kursi' => 'A99',
-                'no_tiket' => 'POKAMAYAMAY-'.'A99'
+                'no_kursi' => $request->no_kursi,
+                'no_tiket' => 'POKAMAYAMAY-'.$request->no_kursi
             ]);
 
             return redirect()->route('registrasi.index')->with('success', 'Tiket berhasil dipesan!');
