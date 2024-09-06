@@ -25,6 +25,11 @@ class AudienceController extends Controller
             'alamat_domisili' => 'required',
             'no_whatsapp' => 'required',
             'no_kursi' => 'required'
+        ], [
+            'nama.required' => 'Nama perlu diisi!',
+            'alamat_domisili.required' => 'Alamat perlu diisi!',
+            'no_whatsapp.required' => 'No Whatsapp perlu diisi!',
+            'no_kursi' => 'Kursi belum dipilih'
         ]);
 
         if($validated) {
