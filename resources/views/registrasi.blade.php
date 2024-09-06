@@ -43,7 +43,7 @@
                         {{-- Kuota Kursi --}}
                         <div class="bg-gray-700 p-2 my-2 flex rounded-lg shadow-lg max-w-md">
                             <p class="font-bold text-gray-100 mb-2 mr-2">Kursi Penonton : <span class="text-blue-200 font-semibold">224</span></p>
-                            <p class="font-bold text-gray-100">Jumlah kursi tersisa: <span class="text-red-400 font-semibold">224</span></p>
+                            <p class="font-bold text-gray-100">Jumlah kursi tersisa: <span class="text-red-400 font-semibold">{{ $sisakursi }}</span></p>
                         </div> 
                     
                         <div class="mt-3 grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-6">
