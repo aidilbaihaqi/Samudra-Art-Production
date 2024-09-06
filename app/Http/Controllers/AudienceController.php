@@ -5,11 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\Audience;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 
 class AudienceController extends Controller
 {
     public function index() {
-        return view('registrasi');
+        $nokursi = DB::table('audiences')->pluck('no_kursi');
+        return view('registrasi', [
+            'nokursi' => $nokursi
+        ]);
     }
 
     public function store(Request $request) {
