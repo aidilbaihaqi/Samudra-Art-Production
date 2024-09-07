@@ -398,7 +398,7 @@
     <div id="successModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
         <div class="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto">
             <h2 class="text-2xl font-bold mb-4">Success</h2>
-            <p class="font-bold mb-4">Pesanan anda telah berhasil! Berikut adalah nomor tiket anda. Pastikan anda menyimpan tiket anda dengan screenshot layar ini dan tunjukkan kepada panitia sebagai syarat untuk masuk pintu teater</p>
+            <p class="font-bold mb-4">Pesanan anda telah berhasil! Berikut adalah nomor tiket anda. Pastikan anda menyimpan tiket anda dengan mendownlod gambar ini atau screenshot layar ini dan tunjukkan kepada panitia sebagai syarat untuk masuk pintu teater</p>
             <img src="{{ asset('assets/tiket/'.session('success').'.png') }}" class="mb-4">
             <button type="button" id="closeModalN" class="rounded-md bg-gray-700 text-white px-3 py-2 text-sm font-semibold shadow-sm hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500">Close</button>
         </div>
