@@ -67,6 +67,13 @@ class KeluargaPesertaSeeder extends Seeder
             'no_kursi' => 'I7',
             'no_tiket' => 'POKAMAYAMAY-I7'
         ]);
+        Audience::create([
+            'nama' => 'Keluarga Cipa',
+            'alamat_domisili' => 'Tanjungpinang',
+            'no_whatsapp' => '628xxxxxxxxx',
+            'no_kursi' => 'K8',
+            'no_tiket' => 'POKAMAYAMAY-K8'
+        ]);
 
         // Anne
         Audience::create([

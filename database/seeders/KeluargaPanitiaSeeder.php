@@ -157,5 +157,30 @@ class KeluargaPanitiaSeeder extends Seeder
             'no_kursi' => 'G11',
             'no_tiket' => 'POKAMAYAMAY-G11'
         ]);
+
+        // Bookingan VIP
+        Audience::create([
+            'nama' => 'Booking VIP Aisyah Jalidris',
+            'alamat_domisili' => 'xxxxxxxx',
+            'no_whatsapp' => 'xxxxxxxxxxxx',
+            'no_kursi' => 'G12',
+            'no_tiket' => 'POKAMAYAMAY-G12'
+        ]);
+        Audience::create([
+            'nama' => 'Booking VIP Yoan Sutrisna Nugraha',
+            'alamat_domisili' => 'xxxxxxxx',
+            'no_whatsapp' => 'xxxxxxxxxxxx',
+            'no_kursi' => 'G13',
+            'no_tiket' => 'POKAMAYAMAY-G13'
+        ]);
+
+        // Bookingan Aidil
+        Audience::create([
+            'nama' => 'Oktaviandra Wahyu Ramadhan',
+            'alamat_domisili' => 'Kijang Kota',
+            'no_whatsapp' => '6283148796357',
+            'no_kursi' => 'L9',
+            'no_tiket' => 'POKAMAYAMAY-L9'
+        ]);
     }
 }
