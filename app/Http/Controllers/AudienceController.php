@@ -56,7 +56,7 @@ class AudienceController extends Controller
         ]);
 
         if($validated) {
-            $audience = Audience::create([
+            Audience::create([
                 'nama' => $request->nama,
                 'alamat_domisili' => $request->alamat_domisili,
                 'no_whatsapp' => $request->no_whatsapp,
@@ -64,7 +64,7 @@ class AudienceController extends Controller
                 'no_tiket' => 'POKAMAYAMAY-'.$request->no_kursi
             ]);
 
-            return redirect()->route('registrasi.index', ['audience' => $audience])->with('success', 'Tiket berhasil dipesan!');
+            return redirect()->route('registrasi.index')->with('success', $request->no_kursi);
         }else {
             return redirect()->route('registrasi.index')->with('error', 'Tiket gagal dipesan!');
         }

@@ -9,7 +9,7 @@
 <body>
   <!-- resources/views/invoice.blade.php -->
   <h1>Invoice Pemesanan</h1>
-  <img src="{{ asset('assets/tiket/J9.png') }}">
+  
   <p>Nama Lengkap: {{ $audience->nama }}</p>
   <p>Alamat Domisili: {{ $audience->alamat_domisili }}</p>
   <p>Nomor Whatsapp: {{ $audience->no_whatsapp }}</p>
