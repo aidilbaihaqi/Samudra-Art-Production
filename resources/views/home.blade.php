@@ -10,7 +10,7 @@
   <link rel="icon" href="{{ asset('assets/img/samudra.jpg') }}">
 
   <!-- Scripts -->
-  @vite(['resources/css/app.css', 'resources/js/app.js'])
+  <link rel="stylesheet" href="{{ asset('assets/css/build.css') }}">
 
   {{-- Style --}}
   <style>

@@ -22,7 +22,7 @@
       font-style: normal;
     }
   </style>
-  @vite(['resources/css/app.css', 'resources/js/app.js'])
+  <link rel="stylesheet" href="{{ asset('assets/css/build.css') }}">
 </head>
 <body>
   <div class="container mx-auto">
