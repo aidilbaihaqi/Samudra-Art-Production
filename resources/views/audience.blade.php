@@ -12,10 +12,9 @@
                 <th class="py-3 px-6 text-left">ID</th>
                 <th class="py-3 px-6 text-left">Nama</th>
                 <th class="py-3 px-6 text-left">Alamat</th>
-                <th class="py-3 px-6 text-center">No Kursi</th>
-                <th class="py-3 px-6 text-center">No Tiket</th>
-                <th class="py-3 px-6 text-center">Status Kehadiran</th>
-                <th class="py-3 px-6 text-center">Aksi</th>
+                <th class="py-3 px-6 text-left">No Kursi</th>
+                <th class="py-3 px-6 text-left">No Tiket</th>
+                <th class="py-3 px-6 text-left">Status Kehadiran</th>
             </tr>
         </thead>
         <tbody class="text-gray-600 dark:text-gray-200 text-sm font-light">
@@ -28,10 +27,11 @@
               <td class="py-3 px-6 text-left">{{ $d->no_kursi }}</td>
               <td class="py-3 px-6 text-left">{{ $d->no_tiket }}</td>
               <td class="py-3 px-6 text-left">
-                <button class="{{ $d->status_kehadiran ? 'bg-blue-500 dark:bg-blue-600 hover:bg-blue-700 dark:hover:bg-blue-500' : 'bg-red-500 dark:bg-red-600 hover:bg-red-700 dark:hover:bg-red-500' }} text-white py-1 px-3 rounded ">{{ $d->status_kehadiran ? 'Hadir' : 'Tidak Hadir' }}</button>
-              </td>
-              <td class="py-3 px-6 text-center">
-                  <button class="bg-blue-500 dark:bg-blue-600 text-white py-1 px-3 rounded hover:bg-blue-700 dark:hover:bg-blue-500">Edit</button>
+                <form action="{{ route('updateStatus', $d->id) }}" method="POST">
+                  @csrf
+                  <input type="hidden" name="status_kehadiran" value="{{ $d->status_kehadiran ? 0 : 1 }}">
+                  <button type="submit" class="{{ $d->status_kehadiran ? 'bg-blue-500 dark:bg-blue-600 hover:bg-blue-700 dark:hover:bg-blue-500' : 'bg-red-500 dark:bg-red-600 hover:bg-red-700 dark:hover:bg-red-500' }} text-white py-1 px-3 rounded ">{{ $d->status_kehadiran  ? 'Hadir' : 'Tidak Hadir' }}</button>
+                </form>
               </td>
           </tr>
           @endforeach

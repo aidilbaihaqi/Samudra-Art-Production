@@ -18,6 +18,18 @@ class AudienceController extends Controller
         ]);
     }
 
+    public function updateStatus($id, Request $request) {
+        $kehadiran = Audience::find($id);
+        if($kehadiran) {
+            $kehadiran->status_kehadiran = $request->status_kehadiran;
+            $kehadiran->save();
+
+            return redirect()->back()->with('status', 'Data terupdate!');
+        }else {
+            return redirect()->back()->with('error', 'Ada kesalahan!');
+        }
+    }
+
     public function registrasi() {
         $nokursi = DB::table('audiences')->pluck('no_kursi');
         $sisakursi = 200 - DB::table('audiences')->count();
