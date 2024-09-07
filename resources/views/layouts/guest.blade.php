@@ -12,7 +12,7 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link rel="stylesheet" href="{{ asset('assets/css/build.css') }}">
     </head>
     <body class="font-sans bg-gray-100 text-gray-900 antialiased">
         <div class="min-h-screen flex flex-col shadow-md sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
