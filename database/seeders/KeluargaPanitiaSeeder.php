@@ -93,6 +93,27 @@ class KeluargaPanitiaSeeder extends Seeder
             'no_kursi' => 'G14',
             'no_tiket' => 'POKAMAYAMAY-G14'
         ]);
+        Audience::create([
+            'nama' => 'Bu Fuji SMK Negeri 1 Tanjungpinang',
+            'alamat_domisili' => 'Tanjungpinang',
+            'no_whatsapp' => '628xxxxxxxx',
+            'no_kursi' => 'F9',
+            'no_tiket' => 'POKAMAYAMAY-F9'
+        ]);
+        Audience::create([
+            'nama' => 'Bu Fuji SMK Negeri 1 Tanjungpinang',
+            'alamat_domisili' => 'Tanjungpinang',
+            'no_whatsapp' => '628xxxxxxxx',
+            'no_kursi' => 'F10',
+            'no_tiket' => 'POKAMAYAMAY-F10'
+        ]);
+        Audience::create([
+            'nama' => 'Bu Fuji SMK Negeri 1 Tanjungpinang',
+            'alamat_domisili' => 'Tanjungpinang',
+            'no_whatsapp' => '628xxxxxxxx',
+            'no_kursi' => 'F11',
+            'no_tiket' => 'POKAMAYAMAY-F11'
+        ]);
 
         // Bookingan Ari E3
         Audience::create([
