@@ -12,6 +12,7 @@ Route::get('/', function () {
 Route::controller(AudienceController::class)->group(function() {
     Route::get('/registrasi', 'registrasi')->name('registrasi.index');
     Route::post('/registrasi', 'store')->name('registrasi.store');
+    // Route::get('/invoice/{id}', 'downloadInvoice')->name('invoice.download');
 }); 
 
 

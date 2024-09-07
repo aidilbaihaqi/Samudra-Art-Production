@@ -86,6 +86,13 @@ class KeluargaPanitiaSeeder extends Seeder
             'no_kursi' => 'E2',
             'no_tiket' => 'POKAMAYAMAY-E2'
         ]);
+        Audience::create([
+            'nama' => 'Rida Kaliamsi',
+            'alamat_domisili' => 'Tanjungpinang',
+            'no_whatsapp' => '628xxxxxxxx',
+            'no_kursi' => 'G14',
+            'no_tiket' => 'POKAMAYAMAY-G14'
+        ]);
 
         // Bookingan Ari E3
         Audience::create([
