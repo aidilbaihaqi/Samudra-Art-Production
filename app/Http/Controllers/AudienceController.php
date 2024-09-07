@@ -6,6 +6,7 @@ use App\Models\Audience;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
+use PDF;
 
 class AudienceController extends Controller
 {
@@ -30,17 +31,18 @@ class AudienceController extends Controller
         }
     }
 
-    public function registrasi() {
+    public function registrasi(Request $request) {
         $nokursi = DB::table('audiences')->pluck('no_kursi');
         $sisakursi = 200 - DB::table('audiences')->count();
+        $audience = $request->audience;
         return view('registrasi', [
             'nokursi' => $nokursi,
-            'sisakursi' => $sisakursi
+            'sisakursi' => $sisakursi,
+            'audience' => $audience
         ]);
     }
 
     public function store(Request $request) {
-        // Kalo sudah bener modal kursi nya, ubah no_kursi menjadi unique di migration dan uncomment no_kursi
         $validated = $request->validate([
             'nama' => 'required|max:100',
             'alamat_domisili' => 'required',
@@ -54,7 +56,7 @@ class AudienceController extends Controller
         ]);
 
         if($validated) {
-            Audience::create([
+            $audience = Audience::create([
                 'nama' => $request->nama,
                 'alamat_domisili' => $request->alamat_domisili,
                 'no_whatsapp' => $request->no_whatsapp,
@@ -62,9 +64,16 @@ class AudienceController extends Controller
                 'no_tiket' => 'POKAMAYAMAY-'.$request->no_kursi
             ]);
 
-            return redirect()->route('registrasi.index')->with('success', 'Tiket berhasil dipesan!');
+            return redirect()->route('registrasi.index', ['audience' => $audience])->with('success', 'Tiket berhasil dipesan!');
         }else {
             return redirect()->route('registrasi.index')->with('error', 'Tiket gagal dipesan!');
         }
+    }
+
+    public function downloadInvoice($id) {
+        $audience = Audience::findOrFail($id);
+        $pdf = PDF::loadView('invoice', compact('audience'));
+        
+        return $pdf->download('invoice.pdf');
     }
 }
