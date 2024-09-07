@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Audience;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -22,13 +21,12 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('pok4may4may')
         ]);
 
-        //  Sample Data
-        Audience::create([
-            'nama' => 'Sample Name',
-            'alamat_domisili' => 'Sample Address',
-            'no_whatsapp' => '081268335349',
-            'no_kursi' => 'A1',
-            'no_tiket' => 'POKAMAYAMAY-A1'
-        ]);
+        // Keluarga Panitia
+        $this->call(KeluargaPanitiaSeeder::class);
+
+        // Keluarga Peserta
+        $this->call(KeluargaPesertaSeeder::class);
+
+        // Kawan - kawan lainnya
     }
 }
