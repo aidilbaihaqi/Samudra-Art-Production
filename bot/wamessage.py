@@ -24,7 +24,22 @@ Salam Hormat,
 Panitia Harmoni Kata
 """
 
-message2 = """"""
+message2 = """*PEMBERITAHUAN HARMONI KATA / PESAN TIDAK BERBALAS*
+Pertunjukan akan dimulai dalam waktu ± 8 Jam lagi!!!! Pastikan anda meluangkan waktu terbaik anda untuk menikmatinya.
+Dengan harapan besar dan mohon kerjasamanya kepada para penonton untuk dapat mengikuti beberapa peraturan berikut : 
+
+1.  Memasuki gedung teater lewat pintu utama gedung mulai pukul *19.00 – 19.40 WIB*
+2.  Penonton yang sudah memiliki tiket melakukan registrasi kepada panita (1-8 melalui tangga kanan, 9-16 melalui tangga kiri) dan dipersilahkan masuk ke Gedung untuk menempati kursi sesuai dengan nomor yang dipesan
+3.  Penonton yang tidak memiliki atau kehabisan tiket tetap bisa menonton dan diarahkan masuk oleh panitia setelah kursi terpenuhi
+4.  Penonton dilarang keras merokok (termasuk vape) di dalam ruangan
+5. Penonton dilarang membawa makanan dan minuman kedalam gedung.
+5.  Jika penampilan sudah dimulai, penonton diharapkan tenang dan diperbolehkan untuk mengambil dokumentasi dengan catatan tidak diperbolehkan menggunakan flash dan melakukan siaran langsung di media sosial
+6.  Saat penampilan berlangsung penonton dilarang untuk bertepuk tangan atau membuat keributan.
+7.  Penonton dilarang menyentuh mixer music, mixer lighting, mixer LED serta alat panggung lainnya di sekitar area panggung
+8.  Setelah selesai, penonton diharapkan dapat keluar dengan tertib melalui pintu masuk
+
+*Jangan lupa datang dan Selamat Menikmati*
+"""
 
 phoneNumberTahap1 = [
 '+6283823142553',
@@ -98,41 +113,41 @@ phoneNumberTahap1 = [
 '+6285363124465',
 '+628172912422',] 
 
-phoneNumberTahap2 = ['+6283148796357',
-'+6282289051762',
-'+6281372373831',
-'+6281293182675',
-'+6282391129420',
-'+6285272642211',
-'+6282173473876',
-'+6282284158514'
-'+6285762694925',
-'+6282284650006',
-'+6282285675388',
-'+6282385558518',
-'+62895603775148',
-'+6283801263703',
-'+6281275027733',
-'+6281389060042',
-'+6282391137506',
-'+6282281940203',
-'+62895600289719',
-'+6281266183785',
-'+6283809810645',
-'+6282283611837',
-'+6281275418394',
-'+6287838239959',
-'+6281261553039',
-'+6285357556969',
-'+6282283382710',
-'+6282171364949',
-'+6282175716483',
-'+6282284744607',
-'+6289654444602',
-'+6281261351122',
-'+6282283159755',
-'+6281228227968',
-'+6281374022806',
+# phoneNumberTahap2 = ['+6283148796357',
+# '+6282289051762',
+# '+6281372373831',
+# '+6281293182675',
+# '+6282391129420',
+# '+6285272642211',
+# '+6282173473876',
+# '+6282284158514'
+# '+6285762694925',
+# '+6282284650006',
+# '+6282285675388',
+# '+6282385558518',
+# '+62895603775148',
+# '+6283801263703',
+# '+6281275027733',
+# '+6281389060042',
+# '+6282391137506',
+# '+6282281940203',
+# '+62895600289719',
+# '+6281266183785',
+# '+6283809810645',
+# '+6282283611837',
+# '+6281275418394',
+# '+6287838239959',
+# '+6281261553039',
+# '+6285357556969',
+# '+6282283382710',
+# '+6282171364949',
+# '+6282175716483',
+# '+6282284744607',
+# '+6289654444602',
+# '+6281261351122',
+# '+6282283159755',
+# '+6281228227968',
+phoneNumberTahap2 = ['+6281374022806',
 '+6281363718113',
 '+628566240924',
 '+6285203284568',
@@ -159,7 +174,7 @@ phoneNumberTahap2 = ['+6283148796357',
 # hasil = hitung_string(phoneNumber)
 # print("Jumlah Nomor: ", hasil)
 
-for number in phoneNumberTahap1:
+for number in phoneNumberTahap2:
   pywhatkit.sendwhatmsg_instantly(number, message2, 10)
   time.sleep(4)
   pyautogui.click()
