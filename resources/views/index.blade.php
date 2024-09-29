@@ -70,9 +70,6 @@
                                 <div class="col-12 col-md-6">
                                     <div class="single-blog-thumbnail">
                                         <img src="{{ asset('assets/img/poster.jpg') }}" alt="">
-                                        <div class="post-date">
-                                            <a href="{{ route('registrasi.index') }}">14 September</span></a>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">

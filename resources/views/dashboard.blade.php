@@ -3,6 +3,13 @@
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Dashboard') }}
         </h2>
+        <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-white hover:bg-gray-200">Edit Profile</a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+              </form>
+              <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="block px-4 py-2 text-white hover:bg-gray-200">Logout</a>
+        
+      
     </x-slot>
 
     <div class="py-12">
