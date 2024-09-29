@@ -6,8 +6,11 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('index', ['title' => 'Gedung Aisyah Sulaiman']);
 })->name('home');
+Route::get('/tentang-gedung', function() {
+    return view('tentang-gedung', ['title' => 'Tentang Gedung']);
+})->name('tentang-gedung');
 
 Route::controller(AudienceController::class)->group(function() {
     Route::get('/registrasi', 'registrasi')->name('registrasi.index');
