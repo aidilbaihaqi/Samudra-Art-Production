@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name' => 'Admin Samudra',
             'email' => 'admin@samudraartproduction.com',
-            'password' => Hash::make('maklem4klem4k')
+            'password' => Hash::make('admin123')
         ]);
 
         // Keluarga Panitia
